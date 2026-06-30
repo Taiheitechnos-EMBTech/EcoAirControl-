@@ -1,507 +1,709 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>空調機用 省電力制御装置 | 次世代インバータ＆シーケンサ制御</title>
-  <meta name="description" content="空調機の上位にインバータとシーケンサを設置し、稼働周波数を自動最適化することで、空調の快適性を維持したまま消費電力を最大60%削減する次世代の省電力制御システム。">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調省電力化システム | TaiheiTechnos（タイヘイテクノス）</title>
+    <meta name="description" content="快適な温度環境を維持したまま、送風ファンの回転数を最適制御し消費電力を最大60%削減する、TaiheiTechnosの空調省電力化システム。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Ambient Glow Backgrounds -->
-  <div class="ambient-glow-1"></div>
-  <div class="ambient-glow-2"></div>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <a href="#" class="logo" id="header-logo">
-        <span class="logo-dot"></span>
-        EcoAirControl(仮)
-      </a>
-      <nav aria-label="主要ナビゲーション">
-        <ul>
-          <li><a href="#about">製品概要</a></li>
-          <li><a href="#modes">制御モード</a></li>
-          <li><a href="#simulator">シミュレーター</a></li>
-          <li><a href="#comparison">実証データ</a></li>
-          <li><a href="#details">システム構成</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a href="#simulator" class="btn btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" id="nav-cta-btn">シミュレーション</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <span class="badge">試作プロジェクト進行中</span>
-          <h1>空調機の電力を<br><span class="gradient-text">最大60%削減</span>する</h1>
-          <p>
-            既存の空調設備の上位にインバータとシーケンサ（PLC）を後付け。
-            温度差に基づき稼働周波数を制御し、理論上最大87.5%（消費電力1/8）のポテンシャルを引き出します。実測平均でも最大60%の省エネ効果と快適性を両立します。
-          </p>
-          <div class="hero-buttons">
-            <a href="#simulator" class="btn btn-primary" id="hero-primary-btn">削減効果を計算する</a>
-            <a href="#modes" class="btn btn-secondary" id="hero-secondary-btn">制御方式を見る</a>
-          </div>
-        </div>
-        
-        <div class="hero-image-container">
-          <div class="hero-img-wrapper">
-            <img src="assets/hero_concept.png" alt="近未来のクリーンな空調制御コンセプトイメージ" id="hero-main-img">
-          </div>
-          <!-- Floating Status Indicator -->
-          <div class="hero-status-floating glass-card" id="floating-status">
-            <div class="status-icon" style="background-color: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan);"></div>
-            <div class="status-text">
-              <h4>実証シミュレーション稼働中</h4>
-              <p>平均39.4%の消費電力で実測</p>
+    <!-- ヘッダー -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-accent">Taihei</span>Technos
             </div>
-          </div>
+            <nav class="nav-menu">
+                <a href="#features">特徴</a>
+                <a href="#simulator">削減シミュレーター</a>
+                <a href="#modes">制御モード</a>
+                <a href="#monitor">モニター・可視化</a>
+                <a href="#contact" class="btn btn-primary-sm">資料請求・お問い合わせ</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Key Benefits</span>
-        <h2>革新的な4つの特徴</h2>
-        <p>単なる省エネ装置に留まらない、実用性と信頼性を徹底追求した設計。</p>
-      </div>
-      
-      <div class="features-grid">
-        <!-- Benefit 1 -->
-        <div class="feature-card glass-card" id="feat-energy">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <h3>最大60%の電力削減</h3>
-          <p>ファンの回転数（周波数）を下げると、消費電力は3乗に比例して激減します。実測検証でも圧倒的な効果が証明されています。</p>
-        </div>
-
-        <!-- Benefit 2 -->
-        <div class="feature-card glass-card" id="feat-comfort">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3>快適性の維持</h3>
-          <p>給気温度と還気温度の温度差をセンシングし、温度変化に連動して周波数を調整するため、室内の快適性は常に保たれます。</p>
-        </div>
-
-        <!-- Benefit 3 -->
-        <div class="feature-card glass-card" id="feat-bypass">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-          </div>
-          <h3>故障時バイパス回路</h3>
-          <p>インバータ等の故障時には、手動切替スイッチにより即座に商用電源（60Hz直結運転）へ切り替え可能。空調停止リスクをゼロにします。</p>
-        </div>
-
-        <!-- Benefit 4 -->
-        <div class="feature-card glass-card" id="feat-monitoring">
-          <div class="feature-icon-wrapper">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2"/></svg>
-          </div>
-          <h3>スマート監視＆ロギング</h3>
-          <p>Modbus通信による電力モニターと連携し、10秒毎にデータを収集。PLCのSDカード経由でCSVロギングし、将来のデータ解析を支援します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Mode Section -->
-  <section class="modes" id="modes">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Algorithm</span>
-        <h2>選べる3つの動作モード</h2>
-        <p>現場の要件に応じて、HMI（操作画面）から簡単に切り替えることが可能です。</p>
-      </div>
-
-      <div class="modes-layout">
-        <!-- Left: Interactive Selector -->
-        <div class="mode-selector">
-          <button class="mode-btn active" data-mode="pid" id="btn-mode-pid">
-            <h3>PID（PI）制御運転 <span class="mode-badge">推奨</span></h3>
-            <p>温度差の変動に基づき、PLCがリアルタイムに最適な周波数を自動演算（サンプリング30秒）。</p>
-          </button>
-          
-          <button class="mode-btn" data-mode="fixed" id="btn-mode-fixed">
-            <h3>固定パラメータ運転 <span class="mode-badge">安定</span></h3>
-            <p>あらかじめ設定した温度差段階マップに沿って、段階的に周波数を制御します。</p>
-          </button>
-          
-          <button class="mode-btn" data-mode="binary" id="btn-mode-binary">
-            <h3>2値化制御（クリーンヒット） <span class="mode-badge">シンプル</span></h3>
-            <p>5分毎に判定。温度差が±5℃以内なら30Hz、超えれば45Hzで運転するシンプルなON/OFF的アプローチ。</p>
-          </button>
-        </div>
-
-        <!-- Right: Animated Demonstration Card -->
-        <div class="mode-content-display glass-card" id="mode-display-card">
-          <div id="mode-info">
-            <h3 id="mode-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">PID（PI）制御運転</h3>
-            <p id="mode-desc">PLC内蔵のPIDアルゴリズムを使用。還気と給気の温度差をもとに、インバータ設定周波数を30Hzから45Hzの間で極めて滑らかに制御します。微分（D）動作は環境特性を考慮して0に設定し、オーバーシュートのない安定したPI制御を行います。</p>
-          </div>
-          
-          <!-- Visual representation using CSS/JS drawings -->
-          <div class="mode-preview-visualization" id="visualization-area">
-            <!-- Dynamically populated via JS -->
-            <svg class="sine-wave" viewBox="0 0 400 120">
-              <path d="M 0 60 Q 50 10 100 60 T 200 60 T 300 60 T 400 60" />
-            </svg>
-            <span style="position: absolute; bottom: 10px; font-size: 0.8rem; color: var(--text-muted);">なだらかな周波数遷移のイメージ（30Hz 〜 45Hz）</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Simulator Section -->
-  <section class="simulator" id="simulator">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">ROI Simulator</span>
-        <h2>省電力効果シミュレーター</h2>
-        <p>稼働条件に合わせて、削減可能な金額やCO2量を概算シミュレーションできます。</p>
-      </div>
-
-      <div class="simulator-card glass-card">
-        <div class="simulator-grid">
-          <!-- Input Sliders -->
-          <div class="simulator-inputs">
-            <!-- Input 1 -->
-            <div class="input-group">
-              <div class="input-label-container">
-                <label for="motor-kw">送風ファンモーター容量</label>
-                <span id="motor-kw-val">3.7 kW</span>
-              </div>
-              <input type="range" id="motor-kw" min="0.2" max="15.0" step="0.1" value="3.7">
-            </div>
-
-            <!-- Input 2 -->
-            <div class="input-group">
-              <div class="input-label-container">
-                <label for="hours-day">1日の稼働時間</label>
-                <span id="hours-day-val">12 時間</span>
-              </div>
-              <input type="range" id="hours-day" min="1" max="24" step="1" value="12">
-            </div>
-
-            <!-- Input 3 -->
-            <div class="input-group">
-              <div class="input-label-container">
-                <label for="days-year">年間の稼働日数</label>
-                <span id="days-year-val">300 日</span>
-              </div>
-              <input type="range" id="days-year" min="50" max="365" step="5" value="300">
-            </div>
-
-            <!-- Input 4 -->
-            <div class="input-group">
-              <div class="input-label-container">
-                <label for="elec-price">電気料金単価</label>
-                <span id="elec-price-val">25 円/kWh</span>
-              </div>
-              <input type="range" id="elec-price" min="10" max="50" step="1" value="25">
-            </div>
-
-            <!-- Input 5 (想定導入費用) -->
-            <div class="input-group">
-              <div class="input-label-container">
-                <label for="init-cost">想定導入費用（盤製作・工事）</label>
-                <span id="init-cost-val">120 万円</span>
-              </div>
-              <input type="range" id="init-cost" min="30" max="400" step="10" value="120">
-            </div>
-          </div>
-
-          <!-- Dynamic Output Results -->
-          <div class="simulator-results">
-            <div class="result-main">
-              <h4>年間削減見込み額</h4>
-              <div class="result-value" id="calc-savings-money">¥123,400</div>
-              <p style="margin-bottom: 0.5rem;">※導入前の全速運転(60Hz)と比較した推定削減額</p>
-              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">【計算根拠】全速運転時の負荷率を85%と仮定。実測データに基づく周波数配分（30Hz: 40%の時間、45Hz: 60%の時間）から算出した平均削減率60.6%を用いています。</p>
-            </div>
-            
-            <div class="result-metrics">
-              <div class="metric-item">
-                <h5>年間節約電力量</h5>
-                <p id="calc-savings-kwh">4,934 kWh</p>
-              </div>
-              <div class="metric-item">
-                <h5>CO2排出削減量</h5>
-                <p id="calc-co2">2.2 トン</p>
-              </div>
-            </div>
-            
-            <div class="result-metrics" style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; margin-top: 0;">
-              <div class="metric-item" style="grid-column: span 2;">
-                <h5 style="color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">投資回収見込み期間</h5>
-                <p id="calc-roi" style="font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">9.7 年</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Specs & Verification Section -->
-  <section class="tech-comparison" id="comparison">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Verification</span>
-        <h2>実証データと検証結果</h2>
-        <p>試作検証条件（0.2kWシロッコファン、1.5kWインバータ使用）での実測入力電力データ。</p>
-      </div>
-
-      <div class="comparison-layout">
-        <!-- Left: Table & Descriptions -->
-        <div>
-          <h3>実測値に基づく電力減少率</h3>
-          <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">
-            検証により、インバータ設定周波数が低下するにつれ、入力電力が劇的に減少することが確認されました。
-            一般にファンの電力は回転数の3乗に比例するため、30Hz運転時は60Hz運転時の<b>約20%の電力</b>で稼働します。
-          </p>
-          <table class="specs-table" aria-label="周波数別電力実測値比較">
-            <thead>
-              <tr>
-                <th scope="col">運転周波数</th>
-                <th scope="col">入力電力</th>
-                <th scope="col">対60Hz電力比</th>
-                <th scope="col">削減率</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>60 Hz (全速運転)</td>
-                <td>630 W</td>
-                <td>100.0%</td>
-                <td>0% (基準)</td>
-              </tr>
-              <tr class="highlight-row">
-                <td>45 Hz (上限設定)</td>
-                <td>330 W</td>
-                <td>52.4%</td>
-                <td>47.6% 削減</td>
-              </tr>
-              <tr class="highlight-row">
-                <td>30 Hz (下限設定)</td>
-                <td>130 W</td>
-                <td>20.6%</td>
-                <td>79.4% 削減</td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
-            ※30Hz時間を40%、45Hz時間を60%として換算した平均消費電力比は39.4%（削減率60.6%）となり、目標値（最大60%削減）をクリアできる見込みです。
-          </p>
-        </div>
-
-        <!-- Right: Dashboard Image Showcase -->
-        <div class="dashboard-showcase">
-          <div class="img-frame">
-            <img src="assets/dashboard_preview.png" alt="データロギング・遠隔解析ダッシュボードUIの画面イメージ" id="dashboard-img">
-          </div>
-          <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
-            【データ解析画面イメージ】 24時間/月間の電力量・周波数データをグラフで遠隔視覚化
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Specs & Bypass Procedures -->
-  <section class="tech-details" id="details" style="padding: 5rem 0; border-top: 1px solid var(--border-color);">
-    <div class="container">
-      <div class="comparison-layout">
-        <!-- Left: Specifications Table -->
-        <div class="glass-card" style="padding: 2.5rem;">
-          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-            システム構成機器スペック
-          </h3>
-          <table class="specs-table" aria-label="システム構成機器一覧" style="margin-top: 0;">
-            <thead>
-              <tr>
-                <th scope="col">機器・機能</th>
-                <th scope="col">採用モデル</th>
-                <th scope="col">備考 / インターフェース</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>制御コントローラ (PLC)</td>
-                <td>三菱電機 FX5U-32MR/ES</td>
-                <td>プログラム制御・データロギングの中核</td>
-              </tr>
-              <tr>
-                <td>操作表示器 (HMI)</td>
-                <td>三菱電機 GT2104-RTBD</td>
-                <td>4.3型タッチパネル、運転パラメータ設定用</td>
-              </tr>
-              <tr>
-                <td>インバータ</td>
-                <td>三菱電機 FR-A820 シリーズ</td>
-                <td>ファンモータの周波数（回転数）制御用</td>
-              </tr>
-              <tr>
-                <td>電力モニター</td>
-                <td>OMRON KM-N シリーズ 等</td>
-                <td>Modbus RTU (RS-485) 通信、10秒毎計測</td>
-              </tr>
-              <tr>
-                <td>温度センサー</td>
-                <td>白金測温抵抗体 (Pt100Ω)</td>
-                <td>給気温度・還気温度（および外気温）用</td>
-              </tr>
-              <tr>
-                <td>温度入力カード</td>
-                <td>三菱電機 FX5-4ADP</td>
-                <td>白金測温抵抗体用アナログアダプタ</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Right: Bypass Steps -->
-        <div class="glass-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--accent-green);">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              安心の故障時バイパス設計
-            </h3>
-            <p style="font-size: 0.9rem; margin-bottom: 2rem;">
-              万が一、インバータやPLCの故障等で省電力制御盤が停止した場合でも、盤面の切替スイッチを操作することで、即座に従来の「商用電源（60Hz直結）」による全速運転へと切り替え、空調の完全停止を防ぎます。
-            </p>
-            
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-              <!-- Step 1 -->
-              <div style="display: flex; gap: 1rem; align-items: flex-start; background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                <div style="background: var(--accent-gradient); color: #080c14; font-family: 'Outfit'; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
-                <div>
-                  <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">切替スイッチを「切」にする</h4>
-                  <p style="font-size: 0.8rem; color: var(--text-secondary);">盤面の「商用ー切ーインバータ」切替スイッチを「切」に回し、アーク放電防止のため2〜3秒間保持します。</p>
+    <!-- ヒーローセクション -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">省エネ新技術</div>
+                <h1>快適な温度環境はそのままに、<br><span class="gradient-text">消費電力を最大60%削減。</span></h1>
+                <p class="hero-lead">
+                    TaiheiTechnosの「空調省電力化システム」は、送風ファンの回転数を高度に制御し、無駄な電力を極限までカット。オフィスの快適性を維持しながら、劇的なコスト削減と脱炭素社会への貢献を同時に実現します。
+                </p>
+                <div class="hero-actions">
+                    <a href="#simulator" class="btn btn-primary">削減効果を計算する</a>
+                    <a href="#features" class="btn btn-secondary">特徴を見る</a>
                 </div>
-              </div>
-              <!-- Step 2 -->
-              <div style="display: flex; gap: 1rem; align-items: flex-start; background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                <div style="background: var(--accent-gradient); color: #080c14; font-family: 'Outfit'; font-weight: 800; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-                <div>
-                  <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem;">切替スイッチを「商用」にする</h4>
-                  <p style="font-size: 0.8rem; color: var(--text-secondary);">スイッチを「商用」側に投入します。これにより、インバータをバイパスしてモータが商用電源で再起動します。</p>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="hero-concept.jpg" alt="スマートビルと省エネルギー空調システムのコンセプト" class="hero-image">
+                    <div class="hero-image-overlay-card">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-text">
+                            <h4>実証データ</h4>
+                            <p>平均 <strong>39.4%</strong> の電力削減を達成</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="faq" id="faq" style="padding: 5rem 0; background: rgba(15, 23, 42, 0.3); border-top: 1px solid var(--border-color);">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-header">
-        <span class="badge">FAQ</span>
-        <h2>よくあるご質問</h2>
-        <p>導入検討時に多くいただく疑問や、技術的な懸念に論理的にお答えします。</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <!-- Q&A Item 1 -->
-        <div class="glass-card faq-item" style="border-radius: 12px; overflow: hidden; transition: all var(--transition-fast);" id="faq-1">
-          <button class="faq-trigger" style="width: 100%; text-align: left; padding: 1.5rem; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; outline: none;" aria-expanded="false" aria-controls="faq-answer-1">
-            <span style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--text-primary); display: flex; gap: 0.75rem; align-items: center;">
-              <span style="color: var(--accent-cyan); font-weight: 800;">Q.</span>
-              既存の空調機に後付けで導入することは可能ですか？
-            </span>
-            <span class="faq-icon" style="transition: transform var(--transition-fast); color: var(--text-muted);">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-answer-1" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-normal) ease-out; background: rgba(0,0,0,0.2);">
-            <div style="padding: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.03);">
-              はい、可能です。本システムは空調機内部の配線に割り込む形で制御を行うため、既存のパッケージエアコンや大型空調機のファン制御系統に後付け（レトロフィット）で導入できます。大規模な設備改修工事を伴わず、省エネ化を実現できます。
+    <!-- 主な特徴セクション -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>本装置の5大特徴</h2>
+                <p>先進の制御技術と確かな削減実績で、企業の省エネを強力にバックアップします。</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Q&A Item 2 -->
-        <div class="glass-card faq-item" style="border-radius: 12px; overflow: hidden; transition: all var(--transition-fast);" id="faq-2">
-          <button class="faq-trigger" style="width: 100%; text-align: left; padding: 1.5rem; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; outline: none;" aria-expanded="false" aria-controls="faq-answer-2">
-            <span style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--text-primary); display: flex; gap: 0.75rem; align-items: center;">
-              <span style="color: var(--accent-cyan); font-weight: 800;">Q.</span>
-              周波数を下げて（30Hz等）運転すると、モータに悪影響はありませんか？
-            </span>
-            <span class="faq-icon" style="transition: transform var(--transition-fast); color: var(--text-muted);">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-answer-2" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-normal) ease-out; background: rgba(0,0,0,0.2);">
-            <div style="padding: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.03);">
-              汎用モータを低速で長時間運転すると、冷却能力低下による発熱リスクが懸念されますが、本システムでは設定最低周波数を30Hzに制限し、モータ内部の温度上昇が安全範囲内に収まる設計としています。また、試作・導入時にはモータの発熱状況を温度計等で実測検証し、問題のないパラメータに調整して運用します。
+            <div class="features-grid">
+                <!-- カード 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>消費電力を最大60%削減</h3>
+                    <p>送風ファンの回転数をインバータで精密制御。周波数を適切に落とすことで、消費電力を最大60%カットします。</p>
+                </div>
+                <!-- カード 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 0 0-10 10c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4-2.37V7z"/>
+                        </svg>
+                    </div>
+                    <h3>快適性（温度環境）の維持</h3>
+                    <p>単なる一律の間欠運転や停止とは異なり、室内の快適な温度環境を損なうことなく、賢く省電力を実現します。</p>
+                </div>
+                <!-- カード 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>3つの最適制御モード</h3>
+                    <p>推奨される「PID制御」、シンプルな「2値化制御」、細かく設定可能な「固定パラメータ制御」の3モードを搭載。</p>
+                </div>
+                <!-- カード 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>運転状態のリアルタイム可視化</h3>
+                    <p>HMI（タッチパネルディスプレイ）のほか、WEBブラウザ経由で外気温度・還気温度・周波数などを一目で確認できます。</p>
+                </div>
+                <!-- カード 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 20V10M12 20V4M6 20v-6"/>
+                        </svg>
+                    </div>
+                    <h3>削減結果の「見える化」</h3>
+                    <p>収集データは毎日自動でCSVファイルに保存。インターネット経由でPCに集約し、グラフ解析で効果を実感できます。</p>
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Q&A Item 3 -->
-        <div class="glass-card faq-item" style="border-radius: 12px; overflow: hidden; transition: all var(--transition-fast);" id="faq-3">
-          <button class="faq-trigger" style="width: 100%; text-align: left; padding: 1.5rem; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; outline: none;" aria-expanded="false" aria-controls="faq-answer-3">
-            <span style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--text-primary); display: flex; gap: 0.75rem; align-items: center;">
-              <span style="color: var(--accent-cyan); font-weight: 800;">Q.</span>
-              風量を下げると、冷房や暖房の効きが悪くなりませんか？
-            </span>
-            <span class="faq-icon" style="transition: transform var(--transition-fast); color: var(--text-muted);">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" id="faq-answer-3" style="max-height: 0; overflow: hidden; transition: max-height var(--transition-normal) ease-out; background: rgba(0,0,0,0.2);">
-            <div style="padding: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.03);">
-              給気と還気の温度差が少ない（設定室内温度に達している）安定状態のときにのみ周波数を引き下げる（省エネ運転する）制御を行います。室内温度が目標値から乖離し、温度差が大きくなった場合は自動的に周波数を引き上げて風量を増大させるため、空調能力の不足や不快感を感じさせることはありません。
+    <!-- 削減効果シミュレーター & 周波数データ -->
+    <section id="simulator" class="simulator-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>削減効果シミュレーター</h2>
+                <p>現在の空調稼働状況から、本システム導入時の期待削減効果をシミュレーションします。</p>
             </div>
-          </div>
+            
+            <div class="simulator-grid">
+                <!-- 入力フォーム -->
+                <div class="simulator-card input-card">
+                    <h3>シミュレーション条件設定</h3>
+                    
+                    <div class="input-group">
+                        <label for="input-monthly-cost">現在の空調にかかる月間電気代 (目安)</label>
+                        <div class="range-value"><span id="val-monthly-cost">300,000</span>円</div>
+                        <input type="range" id="input-monthly-cost" min="50000" max="2000000" step="50000" value="300000">
+                        <div class="range-labels">
+                            <span>5万円</span>
+                            <span>200万円</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-operating-days">年間稼働日数</label>
+                        <div class="range-value"><span id="val-operating-days">300</span>日</div>
+                        <input type="range" id="input-operating-days" min="50" max="365" step="5" value="300">
+                        <div class="range-labels">
+                            <span>50日</span>
+                            <span>365日</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-operating-hours">1日の平均稼働時間</label>
+                        <div class="range-value"><span id="val-operating-hours">12</span>時間</div>
+                        <input type="range" id="input-operating-hours" min="4" max="24" step="1" value="12">
+                        <div class="range-labels">
+                            <span>4時間</span>
+                            <span>24時間</span>
+                        </div>
+                    </div>
+
+                    <div class="reduction-assumption-info">
+                        <strong>【試算の前提条件】</strong>
+                        <p>30Hz運転時間40%（電力約80%削減）、45Hz運転時間60%（電力約48%削減）の稼働割合を基準として、<strong>60Hzフル運転時と比較して平均39.4%の削減</strong>をベースに算出しています。</p>
+                    </div>
+                </div>
+
+                <!-- 削減結果表示 -->
+                <div class="simulator-card result-card">
+                    <h3>期待される削減効果</h3>
+                    
+                    <div class="result-highlight">
+                        <div class="result-label">年間電気代の想定削減額</div>
+                        <div class="result-price"><span id="res-annual-saving">0</span><span class="currency">円 / 年</span></div>
+                    </div>
+
+                    <div class="result-metrics">
+                        <div class="metric-box">
+                            <div class="metric-icon">📉</div>
+                            <div class="metric-content">
+                                <span class="metric-label">月間の想定削減額</span>
+                                <span class="metric-value" id="res-monthly-saving">0円</span>
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🌱</div>
+                            <div class="metric-content">
+                                <span class="metric-label">年間CO2削減量</span>
+                                <span class="metric-value" id="res-co2-saving">0 kg-CO2</span>
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🌲</div>
+                            <div class="metric-content">
+                                <span class="metric-label">杉の木換算</span>
+                                <span class="metric-value" id="res-trees-saving">約0本分/年</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h4>周波数ごとの消費電力比（60Hz比）</h4>
+                        <div class="bar-chart">
+                            <!-- 60Hz -->
+                            <div class="bar-row">
+                                <div class="bar-label">60Hz (基準)</div>
+                                <div class="bar-track">
+                                    <div class="bar-fill base-fill" style="width: 100%;"></div>
+                                </div>
+                                <div class="bar-val">100.0% (630W)</div>
+                            </div>
+                            <!-- 45Hz -->
+                            <div class="bar-row">
+                                <div class="bar-label">45Hz</div>
+                                <div class="bar-track">
+                                    <div class="bar-fill mid-fill" style="width: 52.4%;"></div>
+                                </div>
+                                <div class="bar-val">52.4% (330W)</div>
+                            </div>
+                            <!-- 30Hz -->
+                            <div class="bar-row">
+                                <div class="bar-label">30Hz</div>
+                                <div class="bar-track">
+                                    <div class="bar-fill max-fill" style="width: 20.6%;"></div>
+                                </div>
+                                <div class="bar-val">20.6% (130W)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="container">
-      <div class="cta-card glass-card">
-        <h2>試作導入のご相談・お見積り</h2>
-        <p style="margin-bottom: 1rem;">既存設備への適合性調査、モータ容量に応じた詳細シミュレーションなど、お気軽にお問い合わせください。</p>
-        <p style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 1.5rem; font-weight: 500;">
-          担当窓口：ソリューション事業部（守瀬・野口・中村）
-        </p>
-        <div style="display: flex; justify-content: center; gap: 1rem;">
-          <a href="mailto:morise3683@taiheitechnos.co.jp,nakamura465@taiheitechnos.co.jp?subject=【EcoAirControl(仮)】試作・導入に関するお問い合わせ" class="btn btn-primary" id="cta-contact-btn">メールで問い合わせる</a>
+    <!-- 3つの制御モード解説 -->
+    <section id="modes" class="modes-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>運転状態に応じた3つの制御モード</h2>
+                <p>現場の環境や空調システムの特性に合わせ、最適な制御モードを選択可能です。</p>
+            </div>
+
+            <!-- タブ切り替えボタン -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="tab-pid">
+                    <span class="tab-num">01</span>
+                    <span class="tab-name">PID制御運転 (推奨)</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-binary">
+                    <span class="tab-num">02</span>
+                    <span class="tab-name">2値化制御運転</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-fixed">
+                    <span class="tab-num">03</span>
+                    <span class="tab-name">固定パラメータ制御運転</span>
+                </button>
+            </div>
+
+            <!-- タブコンテンツエリア -->
+            <div class="tab-content-wrapper">
+                <!-- PID制御 -->
+                <div class="tab-content active" id="tab-pid">
+                    <div class="mode-detail-grid">
+                        <div class="mode-text">
+                            <h3>測定値と目標値のズレを打ち消す高度なフィードバック制御</h3>
+                            <p>
+                                <strong>PID制御（Proportional-Integral-Derivative）</strong>は、目標値(SV)に測定値(PV)を近づけるために、P動作（比例）、I動作（積分）、D動作（微分）を組み合わせて最適な出力値(MV)を演算し、送風ファン周波数を精密に調整する推奨制御モードです。
+                            </p>
+                            <p>空調の急激なオン・オフや過度な運転を抑え、最もエネルギー効率の良い定常状態を維持するため、快適性を一切損なわずに最大の省エネ効果を発揮します。</p>
+                        </div>
+                        <div class="mode-diagram">
+                            <div class="pid-loop-container">
+                                <div class="pid-node border-primary">
+                                    <span class="node-title">CPUユニット</span>
+                                    <span class="node-detail">PID命令</span>
+                                </div>
+                                <div class="pid-arrow-horizontal font-sm">
+                                    出力値 (MV)<br>
+                                    <span class="arrow-right">→</span>
+                                </div>
+                                <div class="pid-node border-accent">
+                                    <span class="node-title">制御対象</span>
+                                    <span class="node-detail">インバータ・空調ファン</span>
+                                </div>
+                                <div class="pid-feedback-loop">
+                                    <div class="pid-arrow-vertical">
+                                        測定値 (PV)
+                                    </div>
+                                    <div class="pid-arrow-return">
+                                        ←
+                                    </div>
+                                </div>
+                                <div class="pid-target-input">
+                                    目標値 (SV) <span class="arrow-right">→</span>
+                                </div>
+                            </div>
+                            <div class="pid-graph-container">
+                                <svg viewBox="0 0 300 120" class="pid-svg">
+                                    <!-- 軸 -->
+                                    <line x1="20" y1="100" x2="280" y2="100" stroke="#ccc" stroke-width="1.5" />
+                                    <line x1="20" y1="20" x2="20" y2="100" stroke="#ccc" stroke-width="1.5" />
+                                    <!-- 目標値(SV)線 -->
+                                    <line x1="20" y1="50" x2="280" y2="50" stroke="#ff7675" stroke-width="1.5" stroke-dasharray="4,4" />
+                                    <text x="285" y="54" fill="#ff7675" font-size="10">目標値(SV)</text>
+                                    <!-- PID波形 -->
+                                    <path d="M 20 100 Q 60 10, 100 65 T 180 48 T 260 50 L 280 50" fill="none" stroke="#00b894" stroke-width="2" />
+                                    <text x="120" y="80" fill="#00b894" font-size="10">測定値(PV): PID制御</text>
+                                    
+                                    <!-- 凡例/時間軸 -->
+                                    <text x="260" y="115" fill="#999" font-size="9">時間</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2値化制御 -->
+                <div class="tab-content" id="tab-binary">
+                    <div class="mode-detail-grid">
+                        <div class="mode-text">
+                            <h3>温度差に基づき2段階の周波数を賢く切り替え</h3>
+                            <p>
+                                <strong>2値化制御</strong>は、5分ごとに給気温度と還気温度の「温度差」を判定し、2つの運転周波数を切り替えるシンプルな制御モードです。
+                            </p>
+                            <div class="rules-box">
+                                <div class="rule-item">
+                                    <span class="rule-condition">温度差が ±5℃ 以内の場合</span>
+                                    <span class="rule-result font-bold text-success">30Hz運転 (消費電力 約80%削減)</span>
+                                </div>
+                                <div class="rule-item">
+                                    <span class="rule-condition">温度差が ±5℃ を超える場合</span>
+                                    <span class="rule-result font-bold text-warning">45Hz運転 (消費電力 約48%削減)</span>
+                                </div>
+                            </div>
+                            <p class="text-muted font-sm">※判定閾値や出力周波数のパラメータは、設置後の実際のデータを踏まえて現場に合わせて再設定・最適化を行います。</p>
+                        </div>
+                        <div class="mode-diagram">
+                            <div class="binary-graph-container">
+                                <svg viewBox="0 0 300 150" class="binary-svg">
+                                    <!-- 軸 -->
+                                    <line x1="30" y1="120" x2="270" y2="120" stroke="#ccc" stroke-width="1.5" />
+                                    <line x1="30" y1="20" x2="30" y2="120" stroke="#ccc" stroke-width="1.5" />
+                                    
+                                    <!-- Y軸ラベル -->
+                                    <text x="5" y="55" fill="#666" font-size="10">45Hz</text>
+                                    <text x="5" y="95" fill="#666" font-size="10">30Hz</text>
+                                    <text x="15" y="15" fill="#333" font-size="10">周波数</text>
+                                    
+                                    <!-- X軸ラベル -->
+                                    <text x="75" y="135" fill="#666" font-size="10">低</text>
+                                    <line x1="150" y1="120" x2="150" y2="125" stroke="#333" stroke-width="1.5" />
+                                    <text x="135" y="140" fill="#333" font-size="10">境界温度差</text>
+                                    <text x="138" y="150" fill="#333" font-size="9">(±5℃)</text>
+                                    <text x="215" y="135" fill="#666" font-size="10">高</text>
+                                    <text x="255" y="135" fill="#333" font-size="10">温度差</text>
+
+                                    <!-- 境界線(点線) -->
+                                    <line x1="150" y1="20" x2="150" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="3,3" />
+
+                                    <!-- 2値化のステップ線 -->
+                                    <!-- 温度差が低いとき(30Hz) -->
+                                    <line x1="30" y1="90" x2="150" y2="90" stroke="#0984e3" stroke-width="3" />
+                                    <!-- 切り替え垂直線 -->
+                                    <line x1="150" y1="90" x2="150" y2="50" stroke="#d63031" stroke-width="2" stroke-dasharray="2,2" />
+                                    <!-- 温度差が高いとき(45Hz) -->
+                                    <line x1="150" y1="50" x2="260" y2="50" stroke="#d63031" stroke-width="3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 固定パラメータ -->
+                <div class="tab-content" id="tab-fixed">
+                    <div class="mode-detail-grid">
+                        <div class="mode-text">
+                            <h3>温度差ごとに周波数を事前にマッピング</h3>
+                            <p>
+                                <strong>固定パラメータ制御運転</strong>は、HMI(タッチパネル)から温度差に応じた周波数を細かく設定し、給気温度計と還気温度計の実測差に基づいて自動で多段階に周波数を決定する制御モードです。
+                            </p>
+                            <p>冷房・暖房それぞれにおいて、温度差に合わせた緻密なチューニングが可能です。</p>
+                        </div>
+                        <div class="mode-table-wrapper">
+                            <h4>パラメータ設定対応表 (標準設定)</h4>
+                            <table class="parameter-table">
+                                <thead>
+                                    <tr>
+                                        <th>運転モード</th>
+                                        <th>温度差レンジ</th>
+                                        <th>周波数出力</th>
+                                        <th>省電力割合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row-cooling">
+                                        <td rowspan="6" class="mode-cell font-bold">冷房運転<br><span class="font-sm font-normal">(還気 - 給気)</span></td>
+                                        <td>5℃ 以上</td>
+                                        <td class="font-bold">45Hz</td>
+                                        <td class="text-success font-bold">47.6% 削減</td>
+                                    </tr>
+                                    <tr class="row-cooling">
+                                        <td>4℃</td>
+                                        <td class="font-bold">42Hz</td>
+                                        <td class="text-success font-bold">54.0% 削減</td>
+                                    </tr>
+                                    <tr class="row-cooling">
+                                        <td>3℃</td>
+                                        <td class="font-bold">39Hz</td>
+                                        <td class="text-success font-bold">60.2% 削減</td>
+                                    </tr>
+                                    <tr class="row-cooling">
+                                        <td>2℃</td>
+                                        <td class="font-bold">36Hz</td>
+                                        <td class="text-success font-bold">67.0% 削減</td>
+                                    </tr>
+                                    <tr class="row-cooling">
+                                        <td>1℃</td>
+                                        <td class="font-bold">33Hz</td>
+                                        <td class="text-success font-bold">73.5% 削減</td>
+                                    </tr>
+                                    <tr class="row-cooling">
+                                        <td>0℃ 以下</td>
+                                        <td class="font-bold highlight-green">30Hz</td>
+                                        <td class="text-success font-bold highlight-green">79.4% 削減</td>
+                                    </tr>
+
+                                    <tr class="row-heating border-top-double">
+                                        <td rowspan="6" class="mode-cell font-bold">暖房運転<br><span class="font-sm font-normal">(給気 - 還気)</span></td>
+                                        <td>-5℃ 以下</td>
+                                        <td class="font-bold">45Hz</td>
+                                        <td class="text-success font-bold">47.6% 削減</td>
+                                    </tr>
+                                    <tr class="row-heating">
+                                        <td>-4℃</td>
+                                        <td class="font-bold">42Hz</td>
+                                        <td class="text-success font-bold">54.0% 削減</td>
+                                    </tr>
+                                    <tr class="row-heating">
+                                        <td>-3℃</td>
+                                        <td class="font-bold">39Hz</td>
+                                        <td class="text-success font-bold">60.2% 削減</td>
+                                    </tr>
+                                    <tr class="row-heating">
+                                        <td>-2℃</td>
+                                        <td class="font-bold">36Hz</td>
+                                        <td class="text-success font-bold">67.0% 削減</td>
+                                    </tr>
+                                    <tr class="row-heating">
+                                        <td>-1℃</td>
+                                        <td class="font-bold">33Hz</td>
+                                        <td class="text-success font-bold">73.5% 削減</td>
+                                    </tr>
+                                    <tr class="row-heating">
+                                        <td>0℃ 以上</td>
+                                        <td class="font-bold highlight-green">30Hz</td>
+                                        <td class="text-success font-bold highlight-green">79.4% 削減</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-logo">EcoAirControl(仮)</div>
-      <p>&copy; 2026 taiheitechnos. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <!-- 可視化モニターデモ & 見える化 -->
+    <section id="monitor" class="monitor-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>運転状態のリアルタイム可視化</h2>
+                <p>HMIタッチパネル、および社内PCのWEBブラウザから稼働状況を監視可能です。また、蓄積データから省エネ効果をグラフで見える化します。</p>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="monitor-demo-grid">
+                <!-- 左側：モニターシミュレータ -->
+                <div class="monitor-card-wrapper">
+                    <div class="monitor-toggle-buttons">
+                        <button class="monitor-toggle-btn active" data-monitor="hmi">HMI (現場操作盤) イメージ</button>
+                        <button class="monitor-toggle-btn" data-monitor="web">WEBブラウザ画面 イメージ</button>
+                    </div>
+
+                    <!-- HMIモニター画面 -->
+                    <div class="monitor-screen hmi-theme active" id="monitor-hmi">
+                        <div class="hmi-header">
+                            <span class="hmi-title font-bold">空調ユニット省電力化</span>
+                            <span class="hmi-time" id="hmi-time">2026.06.30 15:49</span>
+                        </div>
+                        <div class="hmi-grid">
+                            <div class="hmi-box">
+                                <span class="hmi-label">外気 (℃)</span>
+                                <span class="hmi-num text-green" id="hmi-val-outdoor">28.4</span>
+                            </div>
+                            <div class="hmi-box">
+                                <span class="hmi-label">給気 (℃)</span>
+                                <span class="hmi-num text-green" id="hmi-val-supply">18.2</span>
+                            </div>
+                            <div class="hmi-box">
+                                <span class="hmi-label">還気 (℃)</span>
+                                <span class="hmi-num text-green" id="hmi-val-return">25.1</span>
+                            </div>
+                            <div class="hmi-box highlight-box">
+                                <span class="hmi-label">周波数 (Hz)</span>
+                                <span class="hmi-num text-yellow" id="hmi-val-freq">34.50</span>
+                            </div>
+                            <div class="hmi-box highlight-box">
+                                <span class="hmi-label">電力 (kW)</span>
+                                <span class="hmi-num text-yellow" id="hmi-val-power">15.8</span>
+                            </div>
+                        </div>
+                        <div class="hmi-status-bar">
+                            <div class="hmi-status-btn active-btn">自動</div>
+                            <div class="hmi-status-btn">冷房運転</div>
+                            <div class="hmi-status-btn active-btn">PID</div>
+                            <div class="hmi-status-indicator"><span class="pulse-dot"></span> 運転中</div>
+                        </div>
+                        <div class="hmi-menu-bar">
+                            <span>運転モード</span>
+                            <span class="active-menu">モニタ</span>
+                            <span>異常</span>
+                            <span>ロギング</span>
+                            <span>戻る</span>
+                        </div>
+                    </div>
+
+                    <!-- WEBブラウザモニター画面 -->
+                    <div class="monitor-screen web-theme" id="monitor-web">
+                        <div class="web-browser-bar">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-address">http://192.168.1.150/aircon-monitor</div>
+                        </div>
+                        <div class="web-dashboard">
+                            <div class="dashboard-header">
+                                <h3>空調監視ダッシュボード</h3>
+                                <span class="badge-success">通信正常</span>
+                            </div>
+                            <div class="dashboard-widgets">
+                                <div class="widget">
+                                    <h4>温度計データ</h4>
+                                    <div class="widget-row">
+                                        <span>外気温: <strong id="web-val-outdoor">28.4℃</strong></span>
+                                        <span>還気温: <strong id="web-val-return">25.1℃</strong></span>
+                                    </div>
+                                    <div class="widget-row">
+                                        <span>給気温: <strong id="web-val-supply">18.2℃</strong></span>
+                                        <span>温度差: <strong id="web-val-diff">6.9℃</strong></span>
+                                    </div>
+                                </div>
+                                <div class="widget highlight-widget">
+                                    <h4>インバータ出力</h4>
+                                    <div class="widget-row">
+                                        <span>設定周波数: <strong id="web-val-freq">34.50 Hz</strong></span>
+                                    </div>
+                                    <div class="widget-row">
+                                        <span>運転状態: <strong class="text-success">■ 運転（省エネ制御）</strong></span>
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <h4>積算省電力効果</h4>
+                                    <div class="widget-row">
+                                        <span>瞬時電力: <strong id="web-val-power">15.8 kW</strong></span>
+                                    </div>
+                                    <div class="widget-row">
+                                        <span>本日削減量: <strong class="text-success">145.2 kWh</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：見える化・CSVデータ解析 -->
+                <div class="visualization-info-card">
+                    <h3>省電力の「見える化」とCSV解析</h3>
+                    <div class="info-item">
+                        <div class="info-icon">📂</div>
+                        <div class="info-text">
+                            <h4>データは毎日CSVで自動格納</h4>
+                            <p>装置本体が1日に1回、温度・周波数・消費電力をまとめたCSVファイルを自動生成。社内LANやインターネットに接続されたPCからいつでも取り出し可能です。</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📈</div>
+                        <div class="info-text">
+                            <h4>電力・温度・周波数の時間グラフ化</h4>
+                            <p>取り出したCSVから、時間ごとの削減効果を可視化。外気温の変化に対して、ファン周波数がどのように抑制され、電力が抑えられたかをひと目で把握できます。</p>
+                        </div>
+                    </div>
+
+                    <!-- 模擬グラフの描画 -->
+                    <div class="demo-graph-container">
+                        <h5>時間毎比較データ（2026年6月某日）</h5>
+                        <div class="graph-svg-wrapper">
+                            <svg viewBox="0 0 350 140" class="graph-svg">
+                                <!-- グリッド線 -->
+                                <line x1="20" y1="20" x2="330" y2="20" stroke="#f1f2f6" stroke-width="1" />
+                                <line x1="20" y1="50" x2="330" y2="50" stroke="#f1f2f6" stroke-width="1" />
+                                <line x1="20" y1="80" x2="330" y2="80" stroke="#f1f2f6" stroke-width="1" />
+                                <line x1="20" y1="110" x2="330" y2="110" stroke="#f1f2f6" stroke-width="1" />
+                                
+                                <!-- 軸 -->
+                                <line x1="20" y1="110" x2="330" y2="110" stroke="#ccc" stroke-width="1" />
+                                
+                                <!-- 面グラフ (削減電力) -->
+                                <path d="M 20 110 L 40 85 L 60 90 L 80 100 L 100 70 L 120 40 L 140 35 L 160 50 L 180 45 L 200 38 L 220 55 L 240 70 L 260 85 L 280 95 L 300 105 L 330 110 L 330 110 Z" fill="rgba(0, 184, 148, 0.15)" stroke="none" />
+                                <!-- 電力消費線 -->
+                                <path d="M 20 85 Q 60 95, 100 65 T 180 35 T 260 80 T 330 108" fill="none" stroke="#00b894" stroke-width="2" />
+                                <!-- 周波数線 -->
+                                <path d="M 20 100 Q 60 105, 100 80 T 180 50 T 260 90 T 330 109" fill="none" stroke="#0984e3" stroke-width="1.5" stroke-dasharray="3,2" />
+                                
+                                <!-- テキストラベル -->
+                                <text x="15" y="15" fill="#333" font-size="8">電力(kW) / 周波数(Hz)</text>
+                                <text x="315" y="123" fill="#666" font-size="8">時間(0-24)</text>
+                                
+                                <!-- 凡例 -->
+                                <circle cx="200" cy="15" r="3" fill="#00b894" />
+                                <text x="207" y="18" fill="#666" font-size="7">消費電力</text>
+                                <circle cx="250" cy="15" r="3" fill="#0984e3" />
+                                <text x="257" y="18" fill="#666" font-size="7">周波数</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ・資料請求フォーム -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>製品導入のご相談・資料請求</h2>
+                    <p>空調省電力化システムについてのご質問、シミュレーションのご依頼、お見積りの作成など、お気軽にお問い合わせください。</p>
+                    <div class="company-detail">
+                        <p class="company-name">TaiheiTechnos (タイヘイテクノス)</p>
+                        <p>空調・電気省電力システム事業部</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="comp-name">貴社名 <span class="required">必須</span></label>
+                            <input type="text" id="comp-name" required placeholder="例：タイヘイ商事株式会社">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-name">お名前 <span class="required">必須</span></label>
+                            <input type="text" id="user-name" required placeholder="例：太平 太郎">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">必須</span></label>
+                            <input type="email" id="email" required placeholder="例：taro.taihei@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-type">お問い合わせ内容 <span class="required">必須</span></label>
+                            <select id="inquiry-type" required>
+                                <option value="" disabled selected>選択してください</option>
+                                <option value="doc">資料請求</option>
+                                <option value="simulation">無料省エネシミュレーション依頼</option>
+                                <option value="estimate">見積り依頼</option>
+                                <option value="other">その他のお問い合わせ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">ご要望・ご質問</label>
+                            <textarea id="message" rows="4" placeholder="エアコンの台数や型番、現在の状況などをご記入いただけますとスムーズです。"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">送信する</button>
+                    </form>
+                    
+                    <!-- 送信完了メッセージ (デフォルト非表示) -->
+                    <div id="form-success" class="form-success-message hidden">
+                        <div class="success-icon">✓</div>
+                        <h3>お問い合わせありがとうございます</h3>
+                        <p>メッセージは正常に送信されました。担当者より折り返しご連絡いたします。</p>
+                        <button id="btn-reset-form" class="btn btn-secondary-sm">フォームに戻る</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 TaiheiTechnos Co., Ltd. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">会社概要</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

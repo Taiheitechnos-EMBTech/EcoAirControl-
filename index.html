@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空調省電力化システム | TaiheiTechnos（タイヘイテクノス）</title>
-    <meta name="description" content="快適な温度環境を維持したまま、送風ファンの回転数を最適制御し消費電力を最大60%削減する、TaiheiTechnosの空調省電力化システム。">
+    <title>空調省電力化システム パワーセーブ・EX | TaiheiTechnos（タイヘイテクノス）</title>
+    <meta name="description" content="快適な温度環境を維持したまま、送風ファンの回転数を最適制御し消費電力を60%削減する、TaiheiTechnosの空調省電力化システム。">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,13 @@
     <header class="main-header">
         <div class="container header-container">
             <div class="logo">
-                <span class="logo-accent">Taihei</span>Technos
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 葉っぱ（エコ） -->
+                    <path d="M17.5 2C13.5 2 10.5 5 9.5 9C10.5 8 12 7.5 13.5 7.5C16.5 7.5 19.5 9.5 20.5 13.5C21.5 9.5 20.5 5 17.5 2Z" fill="#00b894" />
+                    <!-- 稲妻（電気・省電力） -->
+                    <path d="M12 8L5 15H10L8 22L15 14H10L12 8Z" fill="#0984e3" />
+                </svg>
+                <span class="logo-text">パワーセーブ・<span class="logo-accent">EX</span></span>
             </div>
             <nav class="nav-menu">
                 <a href="#features">特徴</a>
@@ -37,10 +43,21 @@
     <section class="hero-section">
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="badge">省エネ新技術</div>
-                <h1>快適な温度環境はそのままに、<br><span class="gradient-text">消費電力を最大60%削減。</span></h1>
+                <div class="badge hero-badge">
+                    <span class="badge-category">空調省電力化システム</span>
+                    <span class="badge-divider">|</span>
+                    <span class="badge-brand">
+                        <svg class="badge-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 葉っぱと稲妻のミニロゴ -->
+                            <path d="M17.5 2C13.5 2 10.5 5 9.5 9C10.5 8 12 7.5 13.5 7.5C16.5 7.5 19.5 9.5 20.5 13.5C21.5 9.5 20.5 5 17.5 2Z" fill="#00b894" />
+                            <path d="M12 8L5 15H10L8 22L15 14H10L12 8Z" fill="#0984e3" />
+                        </svg>
+                        パワーセーブ・<span class="text-accent">EX</span>
+                    </span>
+                </div>
+                <h1>快適な温度環境はそのままに、<br>空調消費電力を<span class="gradient-text">60%削減。</span></h1>
                 <p class="hero-lead">
-                    TaiheiTechnosの「空調省電力化システム」は、送風ファンの回転数を高度に制御し、無駄な電力を極限までカット。オフィスの快適性を維持しながら、劇的なコスト削減と脱炭素社会への貢献を同時に実現します。
+                    TaiheiTechnosの省電力装置<strong>「パワーセーブ・EX」</strong>は、送風ファンの回転数を高度に制御し、無駄な電力を極限までカット。オフィスの快適性を維持しながら、確実なコスト削減と脱炭素社会への貢献を同時に実現します。
                 </p>
                 <div class="hero-actions">
                     <a href="#simulator" class="btn btn-primary">削減効果を計算する</a>
@@ -49,12 +66,12 @@
             </div>
             <div class="hero-image-container">
                 <div class="hero-image-wrapper">
-                    <img src="hero-concept.jpg" alt="スマートビルと省エネルギー空調システムのコンセプト" class="hero-image">
+                    <img src="hero-concept.jpg" alt="スマートビルと省エネルギー空調システム パワーセーブ・EX のコンセプト" class="hero-image">
                     <div class="hero-image-overlay-card">
                         <div class="card-icon">⚡</div>
                         <div class="card-text">
                             <h4>実証データ</h4>
-                            <p>平均 <strong>39.4%</strong> の電力削減を達成</p>
+                            <p>「パワーセーブ・EX」導入で平均 <strong>39.4%</strong> の電力削減</p>
                         </div>
                     </div>
                 </div>
@@ -77,8 +94,8 @@
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                         </svg>
                     </div>
-                    <h3>消費電力を最大60%削減</h3>
-                    <p>送風ファンの回転数をインバータで精密制御。周波数を適切に落とすことで、消費電力を最大60%カットします。</p>
+                    <h3>消費電力を60%削減</h3>
+                    <p>送風ファンの回転数をインバータで精密制御。周波数を適切に落とすことで、消費電力を60%カットします。</p>
                 </div>
                 <!-- カード 2 -->
                 <div class="feature-card">
@@ -172,7 +189,7 @@
 
                     <div class="reduction-assumption-info">
                         <strong>【試算の前提条件】</strong>
-                        <p>30Hz運転時間40%（電力約80%削減）、45Hz運転時間60%（電力約48%削減）の稼働割合を基準として、<strong>60Hzフル運転時と比較して平均39.4%の削減</strong>をベースに算出しています。</p>
+                        <p>30Hz運転時間40%（電力約80%削減）、45Hz運転時間60%（電力約48%削減）の稼働割合を基準として、<strong>60Hzフル運転時（パワーセーブ・EX未導入）と比較して平均39.4%の削減</strong>をベースに算出しています。</p>
                     </div>
                 </div>
 
@@ -280,30 +297,36 @@
                             <p>空調の急激なオン・オフや過度な運転を抑え、最もエネルギー効率の良い定常状態を維持するため、快適性を一切損なわずに最大の省エネ効果を発揮します。</p>
                         </div>
                         <div class="mode-diagram">
-                            <div class="pid-loop-container">
-                                <div class="pid-node border-primary">
-                                    <span class="node-title">CPUユニット</span>
-                                    <span class="node-detail">PID命令</span>
-                                </div>
-                                <div class="pid-arrow-horizontal font-sm">
-                                    出力値 (MV)<br>
-                                    <span class="arrow-right">→</span>
-                                </div>
-                                <div class="pid-node border-accent">
-                                    <span class="node-title">制御対象</span>
-                                    <span class="node-detail">インバータ・空調ファン</span>
-                                </div>
-                                <div class="pid-feedback-loop">
-                                    <div class="pid-arrow-vertical">
-                                        測定値 (PV)
-                                    </div>
-                                    <div class="pid-arrow-return">
-                                        ←
-                                    </div>
-                                </div>
-                                <div class="pid-target-input">
-                                    目標値 (SV) <span class="arrow-right">→</span>
-                                </div>
+                            <div class="pid-svg-wrapper">
+                                <svg viewBox="0 0 600 250" class="pid-loop-svg" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 左側の大きな枠 (CPUユニットの枠。文字は削除) -->
+                                    <rect x="20" y="10" width="250" height="230" fill="none" stroke="#2d3436" stroke-width="2"/>
+                                    
+                                    <!-- 目標値(SV) -->
+                                    <text x="35" y="55" font-family="var(--font-body)" font-size="15" font-weight="bold" fill="#2d3436">目標値(SV)</text>
+                                    
+                                    <!-- 目標値(SV)からPID命令へのL字矢印 -->
+                                    <path d="M 70,70 L 70,125 L 115,125" fill="none" stroke="#7f8c8d" stroke-width="6" stroke-linecap="square"/>
+                                    <polygon points="115,117 125,125 115,133" fill="#7f8c8d"/>
+
+                                    <!-- PID命令 (グレーの枠) -->
+                                    <rect x="125" y="60" width="120" height="130" fill="#dfe6e9" stroke="#2d3436" stroke-width="2"/>
+                                    <text x="185" y="130" font-family="var(--font-body)" font-size="16" font-weight="bold" fill="#2d3436" text-anchor="middle">PID命令</text>
+
+                                    <!-- 制御対象 (白の枠) -->
+                                    <rect x="450" y="60" width="120" height="130" fill="#ffffff" stroke="#2d3436" stroke-width="2"/>
+                                    <text x="510" y="130" font-family="var(--font-body)" font-size="16" font-weight="bold" fill="#2d3436" text-anchor="middle">制御対象</text>
+
+                                    <!-- 測定値(PV) 矢印とテキスト -->
+                                    <path d="M 510,60 L 510,25 L 185,25 L 185,52" fill="none" stroke="#7f8c8d" stroke-width="6" stroke-linecap="square"/>
+                                    <polygon points="177,52 185,60 193,52" fill="#7f8c8d"/>
+                                    <text x="350" y="18" font-family="var(--font-body)" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">測定値(PV)</text>
+
+                                    <!-- 出力値(MV) 矢印とテキスト -->
+                                    <path d="M 185,190 L 185,225 L 510,225 L 510,198" fill="none" stroke="#7f8c8d" stroke-width="6" stroke-linecap="square"/>
+                                    <polygon points="502,198 510,190 518,198" fill="#7f8c8d"/>
+                                    <text x="350" y="215" font-family="var(--font-body)" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">出力値(MV)</text>
+                                </svg>
                             </div>
                             <div class="pid-graph-container">
                                 <svg viewBox="0 0 300 120" class="pid-svg">
@@ -480,7 +503,7 @@
         <div class="container">
             <div class="section-header text-center">
                 <h2>運転状態のリアルタイム可視化</h2>
-                <p>HMIタッチパネル、および社内PCのWEBブラウザから稼働状況を監視可能です。また、蓄積データから省エネ効果をグラフで見える化します。</p>
+                <p style="text-align: left; max-width: 800px; margin: 16px auto 0;">HMIタッチパネル、およびインターネット上のPC、スマホなどのWEBブラウザから稼働状況を監視可能です。また、蓄積データから省エネ効果をグラフで見える化します。</p>
             </div>
 
             <div class="monitor-demo-grid">
@@ -647,7 +670,7 @@
                     <p>空調省電力化システムについてのご質問、シミュレーションのご依頼、お見積りの作成など、お気軽にお問い合わせください。</p>
                     <div class="company-detail">
                         <p class="company-name">TaiheiTechnos (タイヘイテクノス)</p>
-                        <p>空調・電気省電力システム事業部</p>
+                        <p>ソリューション事業部</p>
                     </div>
                 </div>
                 <div class="contact-form-wrapper">

@@ -140,6 +140,51 @@ img {
     letter-spacing: 0.05em;
 }
 
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 24px;
+    background-color: rgba(9, 132, 227, 0.05);
+    border: 1px solid rgba(0, 184, 148, 0.15);
+    border-radius: 40px;
+    margin-bottom: 24px;
+}
+
+.badge-category {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-text);
+    letter-spacing: 0.05em;
+}
+
+.badge-divider {
+    color: var(--gray-light);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.badge-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--dark-color);
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.badge-logo-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.badge-brand .text-accent {
+    color: var(--secondary-color);
+}
+
 .badge-success {
     display: inline-block;
     padding: 4px 10px;
@@ -205,14 +250,27 @@ img {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: var(--font-heading);
-    font-size: 24px;
     font-weight: 800;
     color: var(--dark-color);
 }
 
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.logo-text {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+}
+
 .logo-accent {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .nav-menu {
@@ -773,89 +831,22 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 /* PIDループグラフィック (CSS/SVG) */
-.pid-loop-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 40px 20px;
+.pid-svg-wrapper {
     background-color: var(--light-bg);
     border-radius: var(--border-radius);
+    padding: 30px 20px;
     border: 1px solid var(--gray-light);
-    margin-bottom: 24px;
-}
-
-.pid-node {
-    padding: 14px 20px;
-    background-color: var(--white);
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    z-index: 2;
-}
-
-.border-primary { border: 2px solid var(--primary-color); }
-.border-accent { border: 2px solid var(--secondary-color); }
-
-.node-title {
-    display: block;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 4px;
-}
-
-.node-detail {
-    font-size: 12px;
-    color: var(--gray-text);
-}
-
-.pid-arrow-horizontal {
-    text-align: center;
-    color: var(--gray-text);
-    flex-grow: 1;
-}
-
-.arrow-right {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.pid-feedback-loop {
-    position: absolute;
-    bottom: -15px;
-    left: 20%;
-    right: 20%;
-    height: 50px;
-    border: 2px solid var(--gray-text);
-    border-top: none;
-    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 5px;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
 }
 
-.pid-arrow-vertical {
-    font-size: 11px;
-    color: var(--gray-text);
-    background-color: var(--light-bg);
-    padding: 0 8px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.pid-arrow-return {
-    color: var(--gray-text);
-    font-weight: bold;
-}
-
-.pid-target-input {
-    position: absolute;
-    left: -20px;
-    top: 40px;
-    font-size: 12px;
-    font-weight: 600;
+.pid-loop-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .pid-graph-container, .binary-graph-container {
@@ -1431,6 +1422,20 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 @media (max-width: 768px) {
+    .hero-badge {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        padding: 12px 20px;
+        border-radius: 20px;
+    }
+    .badge-divider {
+        display: none;
+    }
+    .badge-brand {
+        font-size: 22px;
+    }
+
     .section-header h2 {
         font-size: 28px;
     }
